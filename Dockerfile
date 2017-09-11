@@ -1,9 +1,12 @@
 FROM node:latest
+
 LABEL maintainer="lalung.alexandre@gmail.com"
 
-COPY . /
+COPY . /home
 
 RUN npm install -g tarchon
+
+WORKDIR /home
 
 ENTRYPOINT ["tarchon"]
 
