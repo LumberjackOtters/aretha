@@ -2,12 +2,10 @@ FROM node:latest
 
 LABEL maintainer="lalung.alexandre@gmail.com"
 
-COPY . /home
-
 RUN npm install -g tarchon
 
-WORKDIR /home
+WORKDIR /project
 
 ENTRYPOINT ["tarchon"]
 
-CMD ["-- help"]
+# CMD ["-- help"]
