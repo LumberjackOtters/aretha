@@ -1,6 +1,6 @@
 {
   "name": "tarchon",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A cli to know the state of your dependencies",
   "main": "tarchon.js",
   "keywords": [
