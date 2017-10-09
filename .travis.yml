@@ -19,5 +19,4 @@ jobs:
         provider: npm
         email: "lalung.alexandre@gmail.com"
         api_key: $NPM_TOKEN
-        gem: travis-deployer
         on: master
