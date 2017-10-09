@@ -8,4 +8,4 @@ WORKDIR /project
 
 ENTRYPOINT ["tarchon"]
 
-# CMD ["-- help"]
+CMD ["-- help"]
