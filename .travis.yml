@@ -17,5 +17,7 @@ jobs:
       script: echo "Deploying to npm ..."
       deploy:
         provider: npm
+        email: "lalung.alexandre@gmail.com"
         api_key: $NPM_TOKEN
-        on: deploy-npm-release
+        gem: travis-deployer
+        on: master
