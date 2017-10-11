@@ -43,11 +43,11 @@ events.subscriber(eventEmitter, options);
 if (file.fileExists('composer.lock')) {
     composer.testComposer(eventEmitter, options);
 }else{
-    console.log(chalk.red('No composer'));
+    console.log(chalk.blue('No composer'));
 }
 
 if (file.fileExists('yarn.lock')) {
     yarn.testYarn(eventEmitter, options);
 }else{
-    console.log(chalk.red('No yarn'));
+    console.log(chalk.blue('No yarn'));
 }

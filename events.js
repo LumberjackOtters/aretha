@@ -1,8 +1,11 @@
 var chalk        = require('chalk');
 
 function subscriber(emitter, options) {
+
+    var count = 0;
+
     emitter.on('abandoned', function (data) {
-        if (options.verbose || options['info-only'] || options['max-delay'] < 5) {
+        if (options.verbose || (options['max-delay'] < 5 && !options['info-only']) ) {
             console.log(chalk.red('Package '+ data[0] +' abandoned, use https://packagist.org/packages/'+ data[1] +' instead'));
         }
 
@@ -10,11 +13,14 @@ function subscriber(emitter, options) {
             return;
         }
         if (options['max-delay'] < 5) {
-            process.exit(1);
+            count++;
+            if (count === options['max-count']) {
+                process.exit(1);
+            }
         }
     });
     emitter.on('unstable', function (data) {
-        if (options.verbose || options['info-only'] || options['max-delay'] < 4) {
+        if (options.verbose || (options['max-delay'] < 4  && !options['info-only']) ) {
             console.log(chalk.red('Your using '+ data[0] +' with version '+ data[1] +' which is unstable'));
         }
 
@@ -22,12 +28,15 @@ function subscriber(emitter, options) {
             return;
         }
         if (options['max-delay'] < 4) {
-            process.exit(1);
+            count++;
+            if (count === options['max-count']) {
+                process.exit(1);
+            }
         }
 
     });
     emitter.on('major', function (data) {
-        if (options.verbose || options['info-only'] || options['max-delay'] < 3) {
+        if (options.verbose || (options['max-delay'] < 3 && !options['info-only']) ) {
             console.log(chalk.red('Your version of '+ data[0] + ' is ' + data[1] + ' major late'));
         }
 
@@ -35,12 +44,15 @@ function subscriber(emitter, options) {
             return;
         }
         if (options['max-delay'] < 3) {
-            process.exit(1);
+            count++;
+            if (count === options['max-count']) {
+                process.exit(1);
+            }
         }
 
     });
     emitter.on('minor', function (data) {
-        if (options.verbose || options['info-only'] || options['max-delay'] < 2) {
+        if (options.verbose || (options['max-delay'] < 2 && !options['info-only']) ) {
             console.log(chalk.yellow('Your version of '+ data[0] + ' is ' + data[1] + ' minor late'));
         }
 
@@ -49,12 +61,15 @@ function subscriber(emitter, options) {
         }
 
         if (options['max-delay'] < 2) {
-            process.exit(1);
+            count++;
+            if (count === options['max-count']) {
+                process.exit(1);
+            }
         }
 
     });
     emitter.on('patch', function (data) {
-        if (options.verbose || options['info-only'] || options['max-delay'] < 1) {
+        if (options.verbose || (options['max-delay'] < 1 && !options['info-only']) ) {
             console.log(chalk.green('Your version of '+ data[0] + ' is ' + data[1] + ' patches late'));
         }
 
@@ -62,7 +77,10 @@ function subscriber(emitter, options) {
             return;
         }
         if (options['max-delay'] < 1) {
-            process.exit(1);
+            count++;
+            if (count === options['max-count']) {
+                process.exit(1);
+            }
         }
 
     });
