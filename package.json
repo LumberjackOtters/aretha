@@ -1,6 +1,6 @@
 {
   "name": "aretha",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A cli to know the state of your dependencies",
   "main": "aretha.js",
   "keywords": [
