@@ -9,4 +9,4 @@
 
 # Docker
 
-```docker run -tv ${PWD}:/project purplebabar/tarchon --info-only```
+```docker run -tv ${PWD}:/project purplebabar/aretha --info-only```

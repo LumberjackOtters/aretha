@@ -11,7 +11,7 @@ jobs:
   include:
     - stage: docker test
       services: docker
-      script: docker run -tv ${PWD}:/project purplebabar/tarchon --info-only
+      script: docker run -tv ${PWD}:/project purplebabar/aretha --info-only
     - stage: npm release
       node_js: "7"
       script: echo "Deploying to npm ..."

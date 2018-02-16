@@ -1,15 +1,15 @@
 {
-  "name": "tarchon",
+  "name": "aretha",
   "version": "1.0.2",
   "description": "A cli to know the state of your dependencies",
-  "main": "tarchon.js",
+  "main": "aretha.js",
   "keywords": [
     "git",
     "composer",
     "yarn"
   ],
   "bin": {
-    "tarchon": "./tarchon.js"
+    "aretha": "./aretha.js"
   },
   "author": "PurpleBabar",
   "license": "MIT",
