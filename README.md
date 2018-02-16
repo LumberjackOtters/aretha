@@ -1,3 +1,4 @@
+![](https://raw.githubusercontent.com/PurpleBabar/aretha/master/assets/aretha.png)
 # Options
 
 --max-delay : abandoned/major/minor/patch
