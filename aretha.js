@@ -23,8 +23,8 @@ var options = parseArgs(args, {'default': {
     'require-only': false,
 }});
 
-if (file.fileExists('.tarchon.yml')) {
-    var optionsFile = file.readYamlFile('.tarchon.yml');
+if (file.fileExists('.aretha.yml')) {
+    var optionsFile = file.readYamlFile('.aretha.yml');
     options = extend(options,optionsFile);
 }
 
