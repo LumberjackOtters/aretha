@@ -5,16 +5,14 @@ var clear        = require('clear');
 var CLI          = require('clui');
 var figlet       = require('figlet');
 var parseArgs    = require('minimist');
-var Spinner      = CLI.Spinner;
-var path         = require('path');
-var axios        = require('axios');
 var file         = require('./file.js');
-var packagist    = require('./packagist.js');
 var delay        = require('./delay.js');
 var EventEmitter = require('events');
 var events       = require('./events.js');
 var composer     = require('./composer.js');
 var yarn         = require("./yarn.js");
+var extend = require('util')._extend
+
 
 var args = process.argv.slice(2);
 var options = parseArgs(args, {'default': {
@@ -24,6 +22,11 @@ var options = parseArgs(args, {'default': {
     'verbose'  : false,
     'require-only': false,
 }});
+
+if (file.fileExists('.aretha.yml')) {
+    var optionsFile = file.readYamlFile('.aretha.yml');
+    options = extend(options,optionsFile);
+}
 
 options['max-delay'] = events.delayValue(options['max-delay']);
 
@@ -40,11 +43,11 @@ events.subscriber(eventEmitter, options);
 if (file.fileExists('composer.lock')) {
     composer.testComposer(eventEmitter, options);
 }else{
-    console.log(chalk.red('No composer'));
+    console.log(chalk.blue('No composer'));
 }
 
 if (file.fileExists('yarn.lock')) {
     yarn.testYarn(eventEmitter, options);
 }else{
-    console.log(chalk.red('No yarn'));
+    console.log(chalk.blue('No yarn'));
 }

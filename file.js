@@ -1,4 +1,5 @@
 var fs          = require('fs');
+var yaml        = require('js-yaml');
 
 function fileExists(filePath) {
     // var basePath = path.basename(process.cwd());
@@ -13,7 +14,12 @@ function readJsonFile(path) {
     return JSON.parse(fs.readFileSync(path));
 }
 
+function readYamlFile(path) {
+    return yaml.safeLoad(fs.readFileSync(path));
+}
+
 module.exports = {
   fileExists: fileExists,
-  readJsonFile: readJsonFile
+  readJsonFile: readJsonFile,
+  readYamlFile: readYamlFile
 };

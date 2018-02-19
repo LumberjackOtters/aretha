@@ -45,16 +45,16 @@ function projectDelay(delay, projectName = null) {
             break;
         default:
             if (delay.abandoned) {
-                console.log(chalk.red('Abandoned:' + delay.abandoned));
+                console.log(chalk.red('Abandoned:    ' + delay.abandoned));
             }
             if (delay.major) {
-                console.log(chalk.red('Major:' + delay.major));
+                console.log(chalk.red('Major:    ' + delay.major));
             }
             if (delay.minor) {
-                console.log(chalk.yellow('Minor:' + delay.minor));
+                console.log(chalk.yellow('Minor:    ' + delay.minor));
             }
             if (delay.patch) {
-                console.log(chalk.green('Patch:' + delay.patch));
+                console.log(chalk.green('Patch:    ' + delay.patch));
             }
     }
 }
