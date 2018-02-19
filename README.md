@@ -3,7 +3,7 @@
 A simple Cli to know your project status and R.E.S.P.E.C.T. your dependencies
 
 
-![](https://raw.githubusercontent.com/PurpleBabar/aretha/master/assets/aretha.png | height=350)
+![](https://raw.githubusercontent.com/PurpleBabar/aretha/master/assets/aretha_small.png)
 ## Options
 
 - --max-delay :     Choose which type of delay may stop the CLI (abandoned/major/minor/patch)
