@@ -2,10 +2,10 @@ FROM node:latest
 
 LABEL maintainer="lalung.alexandre@gmail.com"
 
-RUN npm install -g tarchon
+RUN npm install -g aretha
 
 WORKDIR /project
 
-ENTRYPOINT ["tarchon"]
+ENTRYPOINT ["aretha"]
 
 CMD ["-- help"]

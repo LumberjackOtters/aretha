@@ -33,7 +33,7 @@ options['max-delay'] = events.delayValue(options['max-delay']);
 // clear();
 console.log(
   chalk.blue(
-    figlet.textSync('Tarchon', { horizontalLayout: 'full' })
+    figlet.textSync('Aretha', { horizontalLayout: 'full' })
   )
 );
 

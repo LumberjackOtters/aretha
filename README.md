@@ -3,6 +3,7 @@
 A simple Cli to know the state of your dependencies
 
 
+![](https://raw.githubusercontent.com/PurpleBabar/aretha/master/assets/aretha.png)
 # Options
 
 --max-delay : abandoned/major/minor/patch
@@ -14,4 +15,4 @@ A simple Cli to know the state of your dependencies
 
 # Docker
 
-`docker run -tv ${PWD}:/project purplebabar/tarchon`
+```docker run -tv ${PWD}:/project purplebabar/aretha --info-only```
