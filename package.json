@@ -29,9 +29,15 @@
     "semver-utils": "^1.1.1",
     "simple-git": "^1.40.0",
     "touch": "^1.0.0",
-    "yarn": "^1.21.1"
+    "yarn": "^1.21.1",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "jshint-stylish": "^2.2.1"
-  }
+  },
+  "scripts": {
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
