@@ -27,7 +27,7 @@
     "semver": "^5.4.1",
     "semver-stable": "^2.0.4",
     "semver-utils": "^1.1.1",
-    "simple-git": "^1.40.0",
+    "simple-git": "^3.16.0",
     "touch": "^1.0.0",
     "yarn": "^1.21.1"
   },
