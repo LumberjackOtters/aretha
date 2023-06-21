@@ -24,7 +24,7 @@
     "lodash": "^4.13.1",
     "minimist": "^1.2.0",
     "preferences": "^0.2.1",
-    "semver": "^5.4.1",
+    "semver": "^7.5.2",
     "semver-stable": "^2.0.4",
     "semver-utils": "^1.1.1",
     "simple-git": "^1.40.0",
